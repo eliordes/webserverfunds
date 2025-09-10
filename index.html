@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>My Experience in Egypt</title>
+        
     </head>
     <body> 
         <div style="background-color:antiquewhite; padding: 16px; text-align: center;">
@@ -17,7 +18,6 @@
         </div>
         <div>
             <p>I had a great time in Egypt, getting to see one of the seven wonders of the world, visiting all the historical sites, scuba diving in the Red Sea, but most important of all, getting to see family!</p>
-            <br/>
             <p style="font-size: 20px;">Places I visited</p>
             <ol>
                 <li>Cairo</li>
@@ -27,8 +27,16 @@
                 <li>Luxor</li>
             </ol>
         </div>
+        <script>
+            function alterText() {
+                document.getElementById("text").innerHTML = "Over 130 Pyramids in Egypt!";
+            }
+        </script>
+        <p id="text"> How many pyramids are there in Egypt?</p>
+        <button type="button" onclick="alterText()">Click here to find out!</button>
+
         <p><a href="form.html">Fill Out My Form</a></p>
-        <button type="button" onclick="alert"> Click Me! </button>
+        <button type="button" onclick="alert('oops, error')"> Click Me! </button>
         <br/>
     </body>
 
