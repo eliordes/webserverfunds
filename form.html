@@ -2,14 +2,19 @@
 <html>
 <head>
   <title>Short Form</title>
+  <script>
+    function myFunction() {
+      alert("Input field lost focus.");
+    }
+</script>
 </head>
 <body>
   <h2>User Info</h2>
-    <input type="text" name="firstname" pattern="[A-Za-z]{2,}" placeholder="John" required><br><br>
-    <input type="email" name="email" placeholder="you@example.com" required><br><br>
-    <input type="date" name="dob" required><br><br>
-    <input type="hidden" name="formID" value="123">
-    <select name="age" required>
+    <input onblur="myFunction()" type="text" name="firstname" pattern="[A-Za-z]{2,}" placeholder="John" required><br><br>
+    <input onblur="myFunction()" type="email" name="email" placeholder="you@example.com" required><br><br>
+    <input onblur="myFunction()" type="date" name="dob" required><br><br>
+    <input onblur="myFunction()" type="hidden" name="formID" value="123">
+    <select onblur="myFunction()" name="age" required>
       <option value="">--Select--</option>
       <option>Under 18</option>
       <option>18-25</option>
