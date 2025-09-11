@@ -3,12 +3,15 @@
 <head>
   <title>Short Form</title>
   <script>
-    function validateform() {
+    function validateForm() {
       if (document.getElementById("1").value =="" ||
           document.getElementById("2").value =="" ||
           document.getElementById("3").value =="" ||
-          document.getElementById("4").value =="") 
+          document.getElementById("4").value =="") {
         alert("Please fill out all required fields");
+        return false;
+        }
+      return true;
     }
 </script>
 </head>
