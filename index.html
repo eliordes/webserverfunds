@@ -6,7 +6,17 @@
             function alterText() {
                 document.getElementById("text").innerHTML = "Over 130 Pyramids in Egypt!";
             }
+
+            function imgVanish() {
+                var x = document.getElementById("mummy");
+                if (x.style.display == "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
         </script>
+
     </head>
     <body style="background-color: azure;"> 
         <div style="background-color:rgb(255, 247, 236); padding: 16px; text-align: center;">
@@ -46,6 +56,13 @@
         <div style="text-align: center;">
             <p style="color: maroon; font-family: 'Times New Roman', Times, serif; font-size: 20px; text-align: center;">Fill Out Form</p>
             <p style="font-size: 15px;"><a href="form.html">Here</a></p>
+        </div>
+        <br/>
+
+        <button onclick="imgVanish()">Spooky</button>
+
+        <div id="mummy;" style="display: flex; flex: justify-content;">
+            <img style="width: 500px; height: 300px;" src="image/4.png"/>
         </div>
         <br/><br/><br/>
     </body>
