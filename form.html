@@ -3,24 +3,29 @@
 <head>
   <title>Short Form</title>
   <script>
-    function myFunction() {
-      alert("Input field lost focus.");
+    function validateform() {
+      if (document.getElementById("1").value =="" ||
+          document.getElementById("2").value =="" ||
+          document.getElementById("3").value =="" ||
+          document.getElementById("4").value =="") 
+        alert("Please fill out all required fields");
     }
 </script>
 </head>
 <body>
-  <h2>User Info</h2>
-    <input onblur="myFunction()" type="text" name="firstname" pattern="[A-Za-z]{2,}" placeholder="John" required><br><br>
-    <input onblur="myFunction()" type="email" name="email" placeholder="you@example.com" required><br><br>
-    <input onblur="myFunction()" type="date" name="dob" required><br><br>
-    <input onblur="myFunction()" type="hidden" name="formID" value="123">
-    <select onblur="myFunction()" name="age" required>
-      <option value="">--Select--</option>
-      <option>Under 18</option>
-      <option>18-25</option>
-      <option>26-35</option>
-    </select><br><br>
-    <input type="submit" value="Submit">
+  <form onsubmit="return validateForm()">
+    <h2>User Info</h2>
+      <input id ="1" type="text" name="firstname" pattern="[A-Za-z]{2,}" placeholder="John" required><br><br>
+      <input id ="2" type="email" name="email" placeholder="you@example.com" required><br><br>
+      <input id ="3" type="date" name="dob" required><br><br>
+      <input id ="4" type="hidden" name="formID" value="123">
+      <select name="age" required>
+        <option value="">--Select--</option>
+        <option>Under 18</option>
+        <option>18-25</option>
+        <option>26-35</option>
+      </select><br><br>
+      <input type="submit" value="Submit">
   </form>
 </body>
 </html>
