@@ -19,6 +19,10 @@
             function imgSwap() {
                 document.getElementById("swap").src ="image/5.jpg";
             }
+
+            function myFunction(elem) {
+                elem.innerHTML = "Don't touch me!";
+            }
         </script>
 
     </head>
@@ -69,6 +73,9 @@
 
         <button style="display: block; margin: 0 auto;" onclick="imgVanish()">Spooky</button>
         <button style="display: block; margin: 0 auto;" onclick="imgSwap()">Reveal the real me</button>
+        <br/>
+
+        <button onclick="myFunction(this)">Click Me!</button>
         <br/><br/><br/>
     </body>
 </html>
