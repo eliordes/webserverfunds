@@ -23,6 +23,14 @@
             function myFunction(elem) {
                 elem.innerHTML = "Don't touch me";
             }
+            
+            retrieveText("helloworld.txt");
+
+            async function retrieveText(file) {
+                let myFile = await fetch(file);
+                let myText = await myFile.text();
+                document.getElementById("test").innerHTML = myText;
+            }
         </script>
 
     </head>
@@ -77,6 +85,12 @@
 
         <p style="color: maroon; font-family: 'Times New Roman', Times, serif; font-size: 20px; text-align: center;">Annoying Button</p>
         <button style="display: block; margin: 0 auto;" onclick="myFunction(this)">Click Me</button>
-        <br/><br/><br/>
+        <br/>
+        <div>
+            <p style="color: maroon; font-family: 'Times New Roman', Times, serif; font-size: 20px; text-align: center;">Async Text Change</p> 
+            <p id="test" style="color: maroon; font-family: 'Times New Roman', Times, serif; font-size: 20px; text-align: center;"> Hello </p>
+            <button style="display: block; margin: 0 auto;" onclick="retrieveText()">Click Me</button>
+        </div>
+        <br/><br/>
     </body>
 </html>
