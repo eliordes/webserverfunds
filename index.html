@@ -24,8 +24,7 @@
                 elem.innerHTML = "Don't touch me";
             }
             
-            retrieveText("helloworld.txt");
-
+            <button style="display: block; margin: 0 auto;" onclick="retrieveText('helloworld.txt');">Click Me</button>
             async function retrieveText(file) {
                 let myFile = await fetch(file);
                 let myText = await myFile.text();
@@ -89,7 +88,6 @@
         <div>
             <p style="color: maroon; font-family: 'Times New Roman', Times, serif; font-size: 20px; text-align: center;">Async Text Change</p> 
             <p id="test" style="color: maroon; font-family: 'Times New Roman', Times, serif; font-size: 20px; text-align: center;"> Hello </p>
-            <button style="display: block; margin: 0 auto;" onclick="retrieveText()">Click Me</button>
         </div>
         <br/><br/>
     </body>
