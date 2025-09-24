@@ -4,6 +4,6 @@
         <title>Part 3.2</title>
     <head>
     <body>
-        <p><?php $_SERVER['HTTP_USER_AGENT']?></p>
+        <p><?=$_SERVER['HTTP_USER_AGENT']?></p>
     </body>
 </html>
