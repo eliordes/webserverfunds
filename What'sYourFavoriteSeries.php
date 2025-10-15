@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favorite Series</title>
+  <script>
+    function validateForm() {
+      if (document.getElementById("1").value =="" ||
+          document.getElementById("2").value =="" ||
+          document.getElementById("3").value =="" ||
+          ) {
+        alert("Please fill out all required fields");
+        return false;
+        }
+      return true;
+    }
+</script>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <h2>User Info</h2>
+      <input id ="1" type="text" name="TV Serie" placeholder="ex. Game of Thrones"><br><br>
+      <input id ="2" type="text" name="Main Actor" placeholder="ex. Emilia Clarke"><br><br>
+      <select name="Genre">
+        <option value="">--Select--</option>
+        <option>Action</option>
+        <option>Crime</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Romance</option>
+        <option>K-Drama</option>
+      </select><br><br>
+      <input id ="3" type="text" name="Seasons" placeholder="ex. 3"><br><br>
+      <select name="Year">
+        <option value="">--Select--</option>
+        <option>1995</option>
+        <option>1996</option>
+        <option>1997</option>
+        <option>1998</option>
+        <option>1999</option>
+        <option>2000</option>
+        <option>2001</option>
+        <option>2002</option>
+        <option>2003</option>
+        <option>2004</option>
+        <option>2005</option>
+        <option>2006</option>
+        <option>2007</option>
+        <option>2008</option>
+        <option>2009</option>
+        <option>2010</option>
+        <option>2011</option>
+        <option>2012</option>
+        <option>2013</option>
+        <option>2014</option>
+        <option>2015</option>
+        <option>2016</option>
+        <option>2017</option>
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+      </select><br><br>
+      <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
