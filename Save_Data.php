@@ -19,8 +19,8 @@
     <head>
     <body>
         <?php
-            $tv_serie = $_POST['TV Serie'];
-            $main_actor = $_POST['Main Actor'];
+            $tv_serie = $_POST['TVSerie'];
+            $main_actor = $_POST['MainActor'];
             $genre = $_POST['Genre'];
             $seasons = $_POST['Seasons'];
             $year = $_POST['Year'];
