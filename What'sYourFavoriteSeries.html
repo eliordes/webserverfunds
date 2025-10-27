@@ -18,9 +18,9 @@
 <body>
   <form onsubmit="return validateForm()" action="Save_Data.php" method="post">
     <h2>Series Info</h2>
-      <input id ="1" type="text" name="TVSerie" placeholder="ex. Game of Thrones"><br><br>
-      <input id ="2" type="text" name="MainActor" placeholder="ex. Emilia Clarke"><br><br>
-      <select name="Genre">
+      <p>Series Name: <input id ="1" type="text" name="TVSerie" placeholder="ex. Game of Thrones"><br><br></p>
+      <p>Main Actor:<input id ="2" type="text" name="MainActor" placeholder="ex. Emilia Clarke"><br><br></p>
+      <p>Genre:<select name="Genre"></p>
         <option value="">--Select--</option>
         <option>Action</option>
         <option>Crime</option>
@@ -29,8 +29,8 @@
         <option>Romance</option>
         <option>K-Drama</option>
       </select><br><br>
-      <input id ="3" type="text" name="Seasons" placeholder="# Seasons"><br><br>
-      <select name="Year">
+      <p>Seasons:<input id ="3" type="text" name="Seasons" placeholder="eg. 8"><br><br></p>
+      <p>Year:<select name="Year"></p>
         <option value="">--Select--</option>
         <option>1995</option>
         <option>1996</option>

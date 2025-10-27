@@ -4,7 +4,7 @@
         <title>SQL test</title>
         <?php
             // Retrieve submitted information
-            $Main_Actor = htmlspecialchars($_GET["courses"]); 
+            $searchstring = htmlspecialchars($_GET['string']); 
             $server = "localhost";
             $username = "elior";
             $password = "blueberrypi5";
@@ -15,16 +15,22 @@
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "select TV serie, genre, seasons, and year from MyTopShows where main actor='{$Main_Actor}';";
+            $sql = "SELECT TV_Serie, Main_Actor, Genre, Seasons, Year FROM MyTopShows
+                WHERE TV_Serie = '{$searchstring}'
+                OR Main_Actor = '{$searchstring}'
+                OR Genre = '{$searchstring}'
+                OR Seasons = '{$searchstring}'
+                OR Year = '{$searchstring}'";
+
             $result = mysqli_query($conn, $sql);
         ?>
     </head>
     <body>
-        You selected main actor <?= $Main_Actor ?>.<br/>
+        You selected <?= $searchstring ?>.<br/>
         <?php
             foreach($result as $row) // There should only be one row returned!
             {
-                echo "row: {$row[‘TVSerieID’]} has TV serie: {$row[‘TV_Serie’]}, seasons: {$row[‘Seasons’]}, year: {$row[‘Year’]}"; 
+                echo "TV_Series {$row['TV_Serie']} | Main_Actor {$row['Main_Actor']} | Genre {$row['Genre']} | Seasons {$row['Seasons']} | Year {$row['Year']}"; 
             }
             // Don't forget to close the connection!
             mysqli_close($conn);

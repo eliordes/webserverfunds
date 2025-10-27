@@ -19,11 +19,11 @@
     <head>
     <body>
         <?php
-            $tv_serie = $_POST['TVSerie'];
-            $main_actor = $_POST['MainActor'];
-            $genre = $_POST['Genre'];
-            $seasons = $_POST['Seasons'];
-            $year = $_POST['Year'];
+            $tv_serie = htmlspecialchars($_POST['TVSerie']);
+            $main_actor = htmlspecialchars($_POST['MainActor']);
+            $genre = htmlspecialchars($_POST['Genre']);
+            $seasons = htmlspecialchars($_POST['Seasons']);
+            $year = htmlspecialchars($_POST['Year']);
 
             $sql = "INSERT INTO MyTopShows (TV_Serie, Main_Actor, Genre, Seasons, Year) 
             VALUES ('$tv_serie', '$main_actor', '$genre', $seasons, $year)";
