@@ -30,7 +30,7 @@
         <?php
             foreach($result as $row) // There should only be one row returned!
             {
-                echo "TV_Series {$row['TV_Serie']} | Main_Actor {$row['Main_Actor']} | Genre {$row['Genre']} | Seasons {$row['Seasons']} | Year {$row['Year']}"; 
+                echo "TV_Series: {$row['TV_Serie']} | Main_Actor: {$row['Main_Actor']} | Genre: {$row['Genre']} | Seasons: {$row['Seasons']} | Year: {$row['Year']}"; 
             }
             // Don't forget to close the connection!
             mysqli_close($conn);
