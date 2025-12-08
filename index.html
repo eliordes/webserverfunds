@@ -31,6 +31,15 @@
                 let myText = await myFile.text();
                 document.getElementById("test").innerHTML = myText;
             }
+
+            async function updateTime() {
+                let response = await fetch("https://worldtimeapi.org/api/timezone/America/Toronto");
+                let data = await response.json();
+                document.getElementById("liveTime").innerHTML =
+                "Current Montreal Date & Time: " + data.datetime;
+            }
+
+setInterval(updateTime, 1000);
         </script>
 
     </head>
@@ -97,5 +106,14 @@
         <input style="display: block; margin: 0 auto;" type="submit" value="Toggle">
         </form>
         <br/><br/>
+        <div style="text-align:center;">
+        <p style="color: maroon; font-family: 'Times New Roman'; font-size: 20px;">
+        Live Montreal Time 
+        </p>
+        <p id="liveTime" style="font-family: 'Times New Roman'; font-size: 20px;">
+        Loading...
+    </p>
+</div>
+
     </body>
 </html>
