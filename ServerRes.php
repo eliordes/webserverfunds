@@ -29,7 +29,7 @@
 
             echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
             
-            header("Location: https://google.com.$Search_Term");
+            header("Location: https://google.com/.$Search_Term");
 
             mysqli_close($conn);
         ?>
