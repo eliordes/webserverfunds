@@ -28,6 +28,8 @@
             $result = mysqli_query($conn, $sql);
 
             echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
+            
+            header("Location: https://google.com.$Search_Term");
 
             mysqli_close($conn);
         ?>
