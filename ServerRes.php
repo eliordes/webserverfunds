@@ -13,7 +13,7 @@
               die("Connection failed: {mysqli_connect_error()}");
             }
 
-            $sql = "select * from MyTopShows;";
+            $sql = "select * from logginginfo;";
             $result = mysqli_query ($conn, $sql);
         ?>
     </head>
