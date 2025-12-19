@@ -36,7 +36,7 @@
                 let response = await fetch("https://worldtimeapi.org/api/timezone/America/Toronto");
                 let data = await response.json();
                 document.getElementById("liveTime").innerHTML =
-                "Current Montreal Date & Time: " + data.datetime;
+                "Montreal Date & Time: " + data.datetime;
             }
 
 setInterval(updateTime, 1000);
