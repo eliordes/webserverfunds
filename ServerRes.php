@@ -3,8 +3,6 @@
     <head>
         <title>PHP Response</title>
         <?php
-            $Search_Term = htmlspecialchars($_POST['text1']); 
-            $IP_Address = htmlspecialchars($_SERVER["REMOTE_ADDR"]);
             $server = "localhost";
             $username = "elior";
             $password = "blueberrypi5";
@@ -18,6 +16,9 @@
     </head>
     <body>
         <?php
+            $Search_Term = htmlspecialchars($_POST['text1']); 
+            $IP_Address = htmlspecialchars($_SERVER["REMOTE_ADDR"]);
+            
             $sql = "INSERT INTO logginginfo (IP_Address, Search_Term) 
             VALUES ($IP_Address, '$Search_Term')";
 
