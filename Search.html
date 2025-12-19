@@ -2,11 +2,16 @@
 <html>
   <head>
     <title>Search</title>
+    <script>
+         async function retrieveString() {
+               
+            }
+    </script>
   </head>
   <body>
     <h2>Search Query</h2>
     <form action="ServerRes.php" method="POST">
-     <p>Search String:<input type="text" id="search" name="text1" required></p>
+     <p>Search String:<input type="text" id="search" name="text1" onkeyup="retrieveString()"></p>
       <br/><br/>
       <input type="submit" value="Search">
    </form>
