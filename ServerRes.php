@@ -3,7 +3,7 @@
     <head>
         <title>PHP Response</title>
         <?php
-            $searchstring = htmlspecialchars($_GET['text1']); 
+            $searchstring = htmlspecialchars($_POST['text1']); 
             $ipaddress = htmlspecialchars($_SERVER["REMOTE_ADDR"]);
             $server = "localhost";
             $username = "elior";
