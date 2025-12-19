@@ -3,8 +3,8 @@
     <head>
         <title>PHP Response</title>
         <?php
-            $searchstring = htmlspecialchars($_POST['text1']); 
-            $ipaddress = htmlspecialchars($_SERVER["REMOTE_ADDR"]);
+            $Search_Term = htmlspecialchars($_POST['text1']); 
+            $IP_Address = htmlspecialchars($_SERVER["REMOTE_ADDR"]);
             $server = "localhost";
             $username = "elior";
             $password = "blueberrypi5";
